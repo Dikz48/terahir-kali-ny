@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History - DIKZ AI</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <style>
+    @media (max-width: 768px) {
+      .history-container { padding: 15px; }
+      .history-item { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-wrapper">
+    <div class="page-sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">DIKZ</a>
+        <button onclick="closeSidebar()" class="btn-icon-mini">✕</button>
+      </div>
+      
+      <div class="sidebar-nav">
+        <a href="/" class="nav-item">🏠 Home</a>
+        <a href="/chat" class="nav-item">💬 Chat</a>
+        <a href="/history" class="nav-item active">📜 History</a>
+        <a href="/settings" class="nav-item">⚙️ Settings</a>
+      </div>
+      
+      <div class="sidebar-footer">
+        <p class="text-xs text-gray-500">v1.0</p>
+      </div>
+    </div>
+
+    <div class="page-overlay" onclick="closeSidebar()"></div>
+
+    <div class="page-main">
+      <div class="page-header">
+        <button onclick="toggleSidebar()" class="btn-menu">☰</button>
+        <h1 class="page-title">Chat History</h1>
+      </div>
+
+      <div class="page-content">
+        <div class="history-container">
+          <div class="history-filter">
+            <input type="text" id="searchInput" placeholder="Cari chat..." class="filter-input">
+            <button onclick="clearAllHistory()" class="btn-danger">Clear All</button>
+          </div>
+          <div id="historyList" class="history-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/history.js"></script>
+</body>
+</html>
