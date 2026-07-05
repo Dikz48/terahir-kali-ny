@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - DIKZ AI</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+</head>
+<body>
+  <div id="app" class="page-wrapper">
+    <div class="page-sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">DIKZ</a>
+        <button onclick="closeSidebar()" class="btn-icon-mini">✕</button>
+      </div>
+      
+      <div class="sidebar-nav">
+        <a href="/" class="nav-item">🏠 Home</a>
+        <a href="/chat" class="nav-item">💬 Chat</a>
+        <a href="/history" class="nav-item">📜 History</a>
+        <a href="/settings" class="nav-item">⚙️ Settings</a>
+      </div>
+      
+      <div class="sidebar-footer">
+        <p class="text-xs text-gray-500">v1.0</p>
+      </div>
+    </div>
+
+    <div class="page-overlay" onclick="closeSidebar()"></div>
+
+    <div class="page-main">
+      <div class="page-header">
+        <button onclick="toggleSidebar()" class="btn-menu">☰</button>
+        <h1 class="page-title">About DIKZ AI</h1>
+      </div>
+
+      <div class="page-content">
+        <div class="about-container">
+          <div class="about-card">
+            <h2>DIKZ AI ASSISTANT</h2>
+            <p>Advanced AI Assistant yang dirancang untuk membantu developer dengan coding, debugging, dan brainstorming.</p>
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Status:</strong> Production Ready</p>
+          </div>
+
+          <div class="about-card">
+            <h3>Features</h3>
+            <ul style="list-style: disc; margin-left: 20px;">
+              <li>Real-time Chat dengan Streaming</li>
+              <li>Code Syntax Highlighting</li>
+              <li>Chat History & Export</li>
+              <li>Customizable Settings</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>Technology</h3>
+            <ul style="list-style: disc; margin-left: 20px;">
+              <li>Node.js & Express Server</li>
+              <li>HuggingFace API Integration</li>
+              <li>Socket.IO for Real-time Updates</li>
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript ES6+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
