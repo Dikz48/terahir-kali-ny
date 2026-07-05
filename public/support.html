@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - DIKZ AI</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <style>
+    @media (max-width: 768px) {
+      .support-container { padding: 15px; }
+      .support-form { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="page-wrapper">
+    <div class="page-sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">DIKZ</a>
+        <button onclick="closeSidebar()" class="btn-icon-mini">✕</button>
+      </div>
+      
+      <div class="sidebar-nav">
+        <a href="/" class="nav-item">🏠 Home</a>
+        <a href="/chat" class="nav-item">💬 Chat</a>
+        <a href="/history" class="nav-item">📜 History</a>
+        <a href="/settings" class="nav-item">⚙️ Settings</a>
+      </div>
+      
+      <div class="sidebar-footer">
+        <p class="text-xs text-gray-500">v1.0</p>
+      </div>
+    </div>
+
+    <div class="page-overlay" onclick="closeSidebar()"></div>
+
+    <div class="page-main">
+      <div class="page-header">
+        <button onclick="toggleSidebar()" class="btn-menu">☰</button>
+        <h1 class="page-title">Support</h1>
+      </div>
+
+      <div class="page-content">
+        <div class="support-container">
+          <div class="support-card">
+            <h2>Need Help?</h2>
+            <p>Hubungi kami untuk bantuan atau pertanyaan tentang DIKZ AI.</p>
+          </div>
+
+          <form class="support-form" onsubmit="handleSupportSubmit(event)">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" required class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" required class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" required class="form-input">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="6" required class="form-input"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Support Request</button>
+          </form>
+
+          <div class="support-card">
+            <h3>FAQ</h3>
+            <details>
+              <summary>Bagaimana cara menggunakan DIKZ AI?</summary>
+              <p>Cukup ketik pertanyaan Anda di chat dan AI akan merespons dengan streaming real-time.</p>
+            </details>
+            <details>
+              <summary>Apakah chat saya disimpan?</summary>
+              <p>Ya, semua chat disimpan secara otomatis dan dapat diakses di History.</p>
+            </details>
+            <details>
+              <summary>Bagaimana cara export chat?</summary>
+              <p>Klik tombol export di halaman Chat untuk mengunduh percakapan Anda.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/support.js"></script>
+</body>
+</html>
